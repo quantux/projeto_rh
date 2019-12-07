@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @competencium.nome %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @competencium.descricao %>
+</p>
+
+<%= link_to 'Edit', edit_competencium_path(@competencium) %> |
+<%= link_to 'Back', competencia_path %>

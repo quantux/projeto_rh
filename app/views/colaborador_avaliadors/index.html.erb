@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Colaborador Avaliadors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nota competencia 1</th>
+      <th>Nota competencia 2</th>
+      <th>Nota competencia 3</th>
+      <th>Avaliador</th>
+      <th>Colaborador</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @colaborador_avaliadors.each do |colaborador_avaliador| %>
+      <tr>
+        <td><%= colaborador_avaliador.nota_competencia_1 %></td>
+        <td><%= colaborador_avaliador.nota_competencia_2 %></td>
+        <td><%= colaborador_avaliador.nota_competencia_3 %></td>
+        <td><%= colaborador_avaliador.avaliador_id %></td>
+        <td><%= colaborador_avaliador.colaborador_id %></td>
+        <td><%= link_to 'Show', colaborador_avaliador %></td>
+        <td><%= link_to 'Edit', edit_colaborador_avaliador_path(colaborador_avaliador) %></td>
+        <td><%= link_to 'Destroy', colaborador_avaliador, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Colaborador Avaliador', new_colaborador_avaliador_path %>

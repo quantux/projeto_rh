@@ -1,0 +1,42 @@
+<%= form_with(model: colaborador_avaliador, local: true) do |form| %>
+  <% if colaborador_avaliador.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(colaborador_avaliador.errors.count, "error") %> prohibited this colaborador_avaliador from being saved:</h2>
+
+      <ul>
+        <% colaborador_avaliador.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nota_competencia_1 %>
+    <%= form.number_field :nota_competencia_1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nota_competencia_2 %>
+    <%= form.number_field :nota_competencia_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nota_competencia_3 %>
+    <%= form.number_field :nota_competencia_3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :avaliador_id %>
+    <%= form.number_field :avaliador_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :colaborador_id %>
+    <%= form.number_field :colaborador_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Competencia</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Descricao</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @competencia.each do |competencium| %>
+      <tr>
+        <td><%= competencium.nome %></td>
+        <td><%= competencium.descricao %></td>
+        <td><%= link_to 'Show', competencium %></td>
+        <td><%= link_to 'Edit', edit_competencium_path(competencium) %></td>
+        <td><%= link_to 'Destroy', competencium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Competencium', new_competencium_path %>

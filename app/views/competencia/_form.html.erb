@@ -1,0 +1,27 @@
+<%= form_with(model: competencium, local: true) do |form| %>
+  <% if competencium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(competencium.errors.count, "error") %> prohibited this competencium from being saved:</h2>
+
+      <ul>
+        <% competencium.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descricao %>
+    <%= form.text_area :descricao %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

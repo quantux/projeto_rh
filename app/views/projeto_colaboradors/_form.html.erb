@@ -1,0 +1,27 @@
+<%= form_with(model: projeto_colaborador, local: true) do |form| %>
+  <% if projeto_colaborador.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(projeto_colaborador.errors.count, "error") %> prohibited this projeto_colaborador from being saved:</h2>
+
+      <ul>
+        <% projeto_colaborador.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :projeto_id %>
+    <%= form.number_field :projeto_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :colaborador_id %>
+    <%= form.number_field :colaborador_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

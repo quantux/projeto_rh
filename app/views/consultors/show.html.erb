@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @consultor.nome %>
+</p>
+
+<p>
+  <strong>Telefone:</strong>
+  <%= @consultor.telefone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @consultor.email %>
+</p>
+
+<%= link_to 'Edit', edit_consultor_path(@consultor) %> |
+<%= link_to 'Back', consultors_path %>

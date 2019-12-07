@@ -1,0 +1,14 @@
+<div id="tela_3" >
+	<div class="title">Competências</div>
+	<div class="list">
+
+		<% @competencias.each do |competencia| %>
+			<div class="iten">
+				<span class="tag_name"><%= competencia.nome %></span>
+				<input type="checkbox">
+				<div id="ifs"><%= competencia.descricao %></div>
+			</div>
+		<% end %>
+		
+	</div>
+</div>

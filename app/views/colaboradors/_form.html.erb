@@ -1,0 +1,67 @@
+<%= form_with(model: colaborador, local: true) do |form| %>
+  <% if colaborador.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(colaborador.errors.count, "error") %> prohibited this colaborador from being saved:</h2>
+
+      <ul>
+        <% colaborador.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cpf %>
+    <%= form.text_field :cpf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :telefone %>
+    <%= form.text_field :telefone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dependentes %>
+    <%= form.check_box :dependentes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :data_nascimento %>
+    <%= form.datetime_select :data_nascimento %>
+  </div>
+
+  <div class="field">
+    <%= form.label :data_admissao %>
+    <%= form.datetime_select :data_admissao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cargo %>
+    <%= form.text_field :cargo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :competencia_id %>
+    <%= form.number_field :competencia_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :empresa_id %>
+    <%= form.number_field :empresa_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

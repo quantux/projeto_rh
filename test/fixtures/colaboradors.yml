@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  email: MyString
+  cpf: MyString
+  telefone: MyString
+  dependentes: false
+  data_nascimento: 2019-12-06 14:21:39
+  data_admissao: 2019-12-06 14:21:39
+  cargo: MyString
+  competencia_id: 1
+  empresa_id: 1
+
+two:
+  nome: MyString
+  email: MyString
+  cpf: MyString
+  telefone: MyString
+  dependentes: false
+  data_nascimento: 2019-12-06 14:21:39
+  data_admissao: 2019-12-06 14:21:39
+  cargo: MyString
+  competencia_id: 1
+  empresa_id: 1

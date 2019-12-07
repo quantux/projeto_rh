@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nota competencia 1:</strong>
+  <%= @colaborador_avaliador.nota_competencia_1 %>
+</p>
+
+<p>
+  <strong>Nota competencia 2:</strong>
+  <%= @colaborador_avaliador.nota_competencia_2 %>
+</p>
+
+<p>
+  <strong>Nota competencia 3:</strong>
+  <%= @colaborador_avaliador.nota_competencia_3 %>
+</p>
+
+<p>
+  <strong>Avaliador:</strong>
+  <%= @colaborador_avaliador.avaliador_id %>
+</p>
+
+<p>
+  <strong>Colaborador:</strong>
+  <%= @colaborador_avaliador.colaborador_id %>
+</p>
+
+<%= link_to 'Edit', edit_colaborador_avaliador_path(@colaborador_avaliador) %> |
+<%= link_to 'Back', colaborador_avaliadors_path %>

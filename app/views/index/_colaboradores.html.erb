@@ -1,0 +1,19 @@
+<div id="tela_2" >
+<div class="title">Colaboradores</div>
+
+<div class="topnav">
+      <a href="/colaboradors/new"> <input type="button" class="button" value="Cadastrar colaborador"> </a>
+</div>
+
+<div class="list">
+
+    <% @colaboradores.each do |colaborador| %>
+        <div class="iten">
+            <span class="tag_name"><%= colaborador.nome %></span>
+            <span class="tag_badg">&times</span>
+            <div id="ifs"></div>
+        </div>
+    <% end %>
+
+</div>
+</div>

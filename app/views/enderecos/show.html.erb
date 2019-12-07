@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rua:</strong>
+  <%= @endereco.rua %>
+</p>
+
+<p>
+  <strong>Cep:</strong>
+  <%= @endereco.cep %>
+</p>
+
+<p>
+  <strong>Bairro:</strong>
+  <%= @endereco.bairro %>
+</p>
+
+<p>
+  <strong>Cidade:</strong>
+  <%= @endereco.cidade %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @endereco.estado %>
+</p>
+
+<p>
+  <strong>Complemento:</strong>
+  <%= @endereco.complemento %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @endereco.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @endereco.longitude %>
+</p>
+
+<p>
+  <strong>Empresa:</strong>
+  <%= @endereco.empresa_id %>
+</p>
+
+<%= link_to 'Edit', edit_endereco_path(@endereco) %> |
+<%= link_to 'Back', enderecos_path %>

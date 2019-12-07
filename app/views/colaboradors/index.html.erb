@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Colaboradors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Cpf</th>
+      <th>Telefone</th>
+      <th>Dependentes</th>
+      <th>Data nascimento</th>
+      <th>Data admissao</th>
+      <th>Cargo</th>
+      <th>Competencia</th>
+      <th>Empresa</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @colaboradors.each do |colaborador| %>
+      <tr>
+        <td><%= colaborador.nome %></td>
+        <td><%= colaborador.email %></td>
+        <td><%= colaborador.cpf %></td>
+        <td><%= colaborador.telefone %></td>
+        <td><%= colaborador.dependentes %></td>
+        <td><%= colaborador.data_nascimento %></td>
+        <td><%= colaborador.data_admissao %></td>
+        <td><%= colaborador.cargo %></td>
+        <td><%= colaborador.competencia_id %></td>
+        <td><%= colaborador.empresa_id %></td>
+        <td><%= link_to 'Show', colaborador %></td>
+        <td><%= link_to 'Edit', edit_colaborador_path(colaborador) %></td>
+        <td><%= link_to 'Destroy', colaborador, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Colaborador', new_colaborador_path %>

@@ -1,0 +1,2 @@
+class Competencium < ApplicationRecord
+end

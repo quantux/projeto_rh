@@ -1,0 +1,20 @@
+<div id="tela_4" >
+<div class="title">Projetos</div>
+<div class="topnav">
+
+    <a href="/projetos/new">
+        <input type="button" class="button" value="Cadastrar projeto">
+    </a>
+</div>
+<div class="list">
+
+    <% @projetos.each do |projeto| %>
+        <div class="iten">
+            <span class="tag_name"><%= projeto.nome %></span>
+            <input type="button" class="button" value="Configurar">
+            <div id="ifs"><%= projeto.descricao %></div>
+            <input type="checkbox">
+        </div>
+    <% end %>
+</div>
+</div>

@@ -1,0 +1,2 @@
+class ProjetoColaborador < ApplicationRecord
+end

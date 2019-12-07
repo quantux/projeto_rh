@@ -1,0 +1,2 @@
+class ColaboradorAvaliador < ApplicationRecord
+end

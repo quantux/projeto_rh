@@ -1,0 +1,19 @@
+<a href="/empresas/new">
+	<div class="cont_button">
+		<input type="button" class="button" value="Cadastrar empresa">
+	</div>
+</a>
+
+<div id="tela_1" >
+	<div class="list">
+
+		<% @empresas.each do |empresa| %>
+			<div class="iten">
+				<span class="tag_name"><%= empresa.nome %></span>
+				<input type="button" class="button" value="Configurar">
+				<span class="tag_badg">&times</span>
+			</div>
+		<% end %>
+
+	</div>
+</div>

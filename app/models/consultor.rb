@@ -1,0 +1,2 @@
+class Consultor < ApplicationRecord
+end
